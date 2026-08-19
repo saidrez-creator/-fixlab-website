@@ -3,109 +3,370 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FIXLAB - Reparación de smartphones, microelectrónica y accesorios.">
-  <title>FIXLAB | Reparación y Tecnología</title>
+
+  <title>FIXLAB | Reparación de móviles y electrónica</title>
+
+  <meta
+    name="description"
+    content="FIXLAB - Reparación de móviles, microelectrónica y accesorios."
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="header">
-    <a class="brand" href="#inicio" aria-label="FIXLAB inicio">
-      <img src="assets/fixlab-horizontal.png" alt="FIXLAB">
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
-    <nav id="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#productos">Productos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+
+      <a href="#inicio" class="logo">
+        <img
+          src="assets/fixlab-horizontal.png"
+          alt="FIXLAB"
+        >
+      </a>
+
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
   </header>
 
+
+  <!-- INICIO -->
   <main>
+
     <section id="inicio" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">MICRO • BOARD • DATA</p>
-        <h1>Reparamos tu tecnología.<br><span>La dejamos como nueva.</span></h1>
-        <p class="lead">
-          Reparación de smartphones, microelectrónica, placas y venta de accesorios.
-          Atención profesional y soluciones rápidas.
-        </p>
-        <div class="actions">
-          <a class="btn btn-green" href="#contacto">Contactar</a>
-          <a class="btn btn-dark" href="#servicios">Ver servicios</a>
+
+      <div class="container hero-content">
+
+        <div class="hero-text">
+
+          <p class="green-text">
+            REPARACIÓN • SMARTPHONES • ELECTRÓNICA
+          </p>
+
+          <h1>
+            Tu móvil entra
+            <span>roto.</span>
+            Sale como nuevo.
+          </h1>
+
+          <p class="description">
+            Reparación profesional de teléfonos móviles,
+            placas electrónicas y dispositivos electrónicos.
+            También encontrarás cables, cargadores,
+            fundas y accesorios.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              class="btn primary"
+              href="https://wa.me/34613645415"
+              target="_blank"
+            >
+              Contactar por WhatsApp
+            </a>
+
+            <a
+              class="btn secondary"
+              href="#servicios"
+            >
+              Ver servicios
+            </a>
+
+          </div>
+
         </div>
+
+
+        <div class="hero-logo">
+
+          <img
+            src="assets/fixlab-circular.jpeg"
+            alt="Logo FIXLAB"
+          >
+
+        </div>
+
       </div>
-      <div class="hero-logo">
-        <img src="assets/fixlab-circular.jpeg" alt="Logo FIXLAB Micro Board Data">
-      </div>
+
     </section>
 
+
+    <!-- SERVICIOS -->
     <section id="servicios" class="section">
-      <p class="eyebrow">LO QUE HACEMOS</p>
-      <h2>Servicios FIXLAB</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="icon">📱</div>
-          <h3>Reparación de smartphones</h3>
-          <p>Pantallas, baterías, conectores, cámaras y problemas de software.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🔧</div>
-          <h3>Microelectrónica</h3>
-          <p>Diagnóstico y reparación de placas y componentes electrónicos.</p>
-        </article>
-        <article class="card">
-          <div class="icon">⚡</div>
-          <h3>Diagnóstico</h3>
-          <p>Identificamos el problema y te explicamos la solución antes de reparar.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🎧</div>
-          <h3>Accesorios</h3>
-          <p>Cables, cargadores, fundas, protectores y otros accesorios.</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="productos" class="section section-dark">
-      <p class="eyebrow">PRODUCTOS</p>
-      <h2>Accesorios y tecnología</h2>
-      <p class="section-text">Próximamente podrás ver nuestro catálogo completo.</p>
-      <div class="product-grid">
-        <div class="product">Cargadores</div>
-        <div class="product">Cables</div>
-        <div class="product">Fundas</div>
-        <div class="product">Protectores</div>
-      </div>
-    </section>
+      <div class="container">
 
-    <section id="nosotros" class="section about">
-      <div>
-        <p class="eyebrow">SOBRE FIXLAB</p>
-        <h2>Pasión por la reparación y la tecnología.</h2>
-        <p>
-          En FIXLAB trabajamos para ofrecer reparaciones cuidadosas, diagnósticos claros
-          y un servicio de confianza. Nuestro enfoque combina experiencia técnica y
-          atención cercana.
+        <p class="green-text center">
+          NUESTROS SERVICIOS
         </p>
+
+        <h2>
+          Soluciones para tus dispositivos
+        </h2>
+
+
+        <div class="cards">
+
+          <div class="card">
+
+            <div class="icon">
+              📱
+            </div>
+
+            <h3>
+              Reparación de móviles
+            </h3>
+
+            <p>
+              Reparación de pantallas, baterías,
+              conectores, cámaras y otros componentes.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">
+              🔧
+            </div>
+
+            <h3>
+              Microelectrónica
+            </h3>
+
+            <p>
+              Diagnóstico y reparación de placas
+              electrónicas con precisión profesional.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">
+              ⚡
+            </div>
+
+            <h3>
+              Problemas de carga
+            </h3>
+
+            <p>
+              Solución de problemas de carga,
+              conectores USB y alimentación.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">
+              🛠️
+            </div>
+
+            <h3>
+              Diagnóstico
+            </h3>
+
+            <p>
+              Identificación del problema antes
+              de realizar la reparación.
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
-      <img src="assets/fixlab-circular.jpeg" alt="FIXLAB">
+
     </section>
 
-    <section id="contacto" class="section contact">
-      <p class="eyebrow">CONTACTO</p>
-      <h2>¿Necesitas una reparación?</h2>
-      <p>Escríbenos y cuéntanos qué problema tiene tu dispositivo.</p>
-      <a class="btn btn-green" id="whatsappBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="section dark-section">
+
+      <div class="container">
+
+        <p class="green-text center">
+          PRODUCTOS
+        </p>
+
+        <h2>
+          Accesorios para tu dispositivo
+        </h2>
+
+
+        <div class="products">
+
+          <div class="product">
+
+            <h3>
+              🔌 Cargadores
+            </h3>
+
+            <p>
+              Cargadores y adaptadores
+              para diferentes dispositivos.
+            </p>
+
+          </div>
+
+
+          <div class="product">
+
+            <h3>
+              🔗 Cables
+            </h3>
+
+            <p>
+              Cables USB y cables de carga
+              de diferentes tipos.
+            </p>
+
+          </div>
+
+
+          <div class="product">
+
+            <h3>
+              📱 Fundas
+            </h3>
+
+            <p>
+              Protección y estilo
+              para tu smartphone.
+            </p>
+
+          </div>
+
+
+          <div class="product">
+
+            <h3>
+              🛡️ Protectores
+            </h3>
+
+            <p>
+              Protección de pantalla
+              y accesorios.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="section">
+
+      <div class="container about">
+
+        <div>
+
+          <p class="green-text">
+            SOBRE FIXLAB
+          </p>
+
+          <h2>
+            Calidad, precisión y confianza.
+          </h2>
+
+          <p>
+            En FIXLAB trabajamos para ofrecer
+            reparaciones profesionales y soluciones
+            fiables para tus dispositivos electrónicos.
+          </p>
+
+          <p>
+            Nuestro objetivo es devolver tu dispositivo
+            funcionando correctamente y con la máxima calidad.
+          </p>
+
+        </div>
+
+
+        <img
+          src="assets/fixlab-circular.jpeg"
+          alt="FIXLAB"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+
+      <div class="container">
+
+        <p class="green-text">
+          CONTACTO
+        </p>
+
+        <h2>
+          ¿Necesitas una reparación?
+        </h2>
+
+        <p>
+          Escríbenos por WhatsApp y cuéntanos
+          qué problema tiene tu dispositivo.
+        </p>
+
+
+        <a
+          class="btn primary"
+          href="https://wa.me/34613645415"
+          target="_blank"
+        >
+          💬 Escribir por WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
-    <img src="assets/fixlab-horizontal.png" alt="FIXLAB">
-    <p>© <span id="year"></span> FIXLAB. Todos los derechos reservados.</p>
+
+    <div class="container">
+
+      <img
+        src="assets/fixlab-horizontal.png"
+        alt="FIXLAB"
+      >
+
+      <p>
+        © 2026 FIXLAB. Todos los derechos reservados.
+      </p>
+
+    </div>
+
   </footer>
 
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
