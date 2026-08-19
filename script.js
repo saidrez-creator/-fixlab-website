@@ -1,35 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const year = document.getElementById("year");
-
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
-
-    const menuButton = document.querySelector(".menu-button");
-    const nav = document.querySelector("nav");
-
-    if (menuButton && nav) {
-        menuButton.addEventListener("click", function () {
-            nav.classList.toggle("active");
-        });
-    }
-
-    const whatsappButtons = document.querySelectorAll(".whatsapp");
-
-    whatsappButtons.forEach(function (button) {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            const phone = "213XXXXXXXXX";
-            const message = "hola FIXLAB, quiero consultar sobre un servicio o producto.";
-
-            window.open(
-                "https://wa.me/" +
-                phone +
-                "?text=" +
-                encodeURIComponent(message),
-                "_blank"
-            );
-        });
-    });
+document.addEventListener("DOMContentLoaded",function(){
+  const phone="213XXXXXXXXX"; // بدّل X برقم WhatsApp تاعك بلا + ولا مسافات
+  const message="سلام FIX LAB، حاب نسقسي على منتوج أو خدمة.";
+  document.querySelectorAll("[data-whatsapp]").forEach(function(el){
+    el.href="https://wa.me/"+phone+"?text="+encodeURIComponent(message);
+    el.target="_blank";
+    el.rel="noopener";
+  });
+  const btn=document.querySelector(".menu-btn"),nav=document.querySelector(".nav");
+  if(btn&&nav){btn.addEventListener("click",()=>nav.classList.toggle("open"));nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));}
+  const y=document.getElementById("year"); if(y)y.textContent=new Date().getFullYear();
 });
