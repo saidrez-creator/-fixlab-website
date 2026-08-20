@@ -4,531 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>FIXLAB | Productos</title>
+  <title>FIXLAB | Reparación de móviles y electrónica</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta
+    name="description"
+    content="FIXLAB - Reparación profesional de móviles, microelectrónica y accesorios."
+  >
 
-    :root {
-      --black: #050606;
-      --black2: #080b09;
-      --card: #101412;
-      --green: #a8ff00;
-      --white: #f5f7f4;
-      --gray: #aab3ad;
-      --border: #28322d;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--black);
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ================= HEADER ================= */
-
-    header {
-      height: 80px;
-      border-bottom: 1px solid #1d291e;
-      background: rgba(5, 6, 6, 0.97);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      max-width: 1200px;
-      height: 100%;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 25px;
-    }
-
-    .logo img {
-      width: 145px;
-      height: auto;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
-    }
-
-    nav a {
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--green);
-    }
-
-    /* ================= PRODUCTS ================= */
-
-    .products-section {
-      position: relative;
-      min-height: 100vh;
-      padding: 80px 30px 100px;
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 18% 50%,
-          rgba(168, 255, 0, 0.08),
-          transparent 30%
-        ),
-        #070908;
-    }
-
-    /*
-      CIRCUIT EFFECT
-      ------------------------------------------------
-      خطوط إلكترونية كبيرة في اليسار
-    */
-
-    .circuit-left {
-      position: absolute;
-      left: -25px;
-      top: 0;
-
-      width: 430px;
-      height: 100%;
-
-      pointer-events: none;
-      z-index: 1;
-
-      opacity: 0.9;
-
-      background:
-        /* نقاط */
-        radial-gradient(
-          circle at 72px 120px,
-          #a8ff00 0 3px,
-          transparent 4px
-        ),
-
-        radial-gradient(
-          circle at 180px 250px,
-          #a8ff00 0 3px,
-          transparent 4px
-        ),
-
-        radial-gradient(
-          circle at 105px 390px,
-          #a8ff00 0 3px,
-          transparent 4px
-        ),
-
-        radial-gradient(
-          circle at 235px 540px,
-          #a8ff00 0 3px,
-          transparent 4px
-        ),
-
-        radial-gradient(
-          circle at 135px 700px,
-          #a8ff00 0 3px,
-          transparent 4px
-        );
-
-      filter:
-        drop-shadow(0 0 6px rgba(168, 255, 0, 0.8))
-        drop-shadow(0 0 18px rgba(168, 255, 0, 0.25));
-    }
-
-    /* الخطوط الرئيسية */
-
-    .circuit-left::before {
-      content: "";
-
-      position: absolute;
-
-      left: 70px;
-      top: 0;
-
-      width: 220px;
-      height: 100%;
-
-      background:
-
-        linear-gradient(
-          90deg,
-          transparent 0 25%,
-          rgba(168, 255, 0, 0.7) 25% 25.5%,
-          transparent 25.5%
-        ),
-
-        linear-gradient(
-          90deg,
-          transparent 0 62%,
-          rgba(168, 255, 0, 0.45) 62% 62.5%,
-          transparent 62.5%
-        );
-
-      opacity: 0.8;
-
-      filter:
-        drop-shadow(0 0 5px rgba(168, 255, 0, 0.6));
-
-      transform: skewX(-8deg);
-    }
-
-    /* المسارات المائلة */
-
-    .circuit-left::after {
-      content: "";
-
-      position: absolute;
-
-      left: 20px;
-      top: 0;
-
-      width: 350px;
-      height: 100%;
-
-      background:
-
-        linear-gradient(
-          28deg,
-          transparent 0 35%,
-          rgba(168, 255, 0, 0.65) 35% 35.5%,
-          transparent 35.5%
-        ),
-
-        linear-gradient(
-          -25deg,
-          transparent 0 55%,
-          rgba(168, 255, 0, 0.55) 55% 55.5%,
-          transparent 55.5%
-        ),
-
-        linear-gradient(
-          18deg,
-          transparent 0 72%,
-          rgba(168, 255, 0, 0.5) 72% 72.5%,
-          transparent 72.5%
-        );
-
-      opacity: 0.75;
-
-      filter:
-        drop-shadow(0 0 5px rgba(168, 255, 0, 0.45));
-
-      mask-image: linear-gradient(
-        to right,
-        black 0%,
-        black 55%,
-        transparent 100%
-      );
-
-      -webkit-mask-image: linear-gradient(
-        to right,
-        black 0%,
-        black 55%,
-        transparent 100%
-      );
-    }
-
-    /* ================= TITLE ================= */
-
-    .section-title {
-      position: relative;
-      z-index: 5;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-title span {
-      color: var(--green);
-      font-size: 13px;
-      letter-spacing: 4px;
-      font-weight: bold;
-    }
-
-    .section-title h1 {
-      font-size: 46px;
-      margin-top: 12px;
-    }
-
-    .section-title p {
-      color: #999;
-      margin-top: 12px;
-    }
-
-    /* ================= GRID ================= */
-
-    .products-grid {
-      position: relative;
-      z-index: 10;
-
-      max-width: 1050px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 28px;
-    }
-
-    /* ================= CARD ================= */
-
-    .product-card {
-      position: relative;
-
-      min-height: 500px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(16, 20, 18, 0.98),
-          rgba(7, 10, 9, 0.98)
-        );
-
-      border: 1px solid #303b34;
-
-      border-radius: 18px;
-
-      padding: 22px;
-
-      overflow: hidden;
-
-      transition: 0.35s ease;
-
-      box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
-    }
-
-    .product-card:hover {
-      border-color: var(--green);
-
-      transform: translateY(-8px);
-
-      box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.45),
-        0 0 25px rgba(168, 255, 0, 0.10);
-    }
-
-    /* خط صغير فوق الكارت */
-
-    .product-card::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 25px;
-
-      width: 45px;
-      height: 2px;
-
-      background: var(--green);
-
-      box-shadow:
-        0 0 10px var(--green);
-    }
-
-    /* ================= PRICE ================= */
-
-    .price {
-      position: absolute;
-
-      top: 18px;
-      left: 18px;
-
-      background: var(--green);
-      color: #071000;
-
-      padding: 8px 13px;
-
-      border-radius: 7px;
-
-      font-size: 20px;
-      font-weight: 800;
-
-      z-index: 20;
-
-      box-shadow:
-        0 0 15px rgba(168, 255, 0, 0.25);
-    }
-
-    /* ================= IMAGE ================= */
-
-    .product-image {
-      height: 270px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: contain;
-
-      transition: 0.4s ease;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.07);
-    }
-
-    /* ================= INFO ================= */
-
-    .product-info h2 {
-      font-size: 22px;
-      margin-bottom: 9px;
-    }
-
-    .specs {
-      color: #bdbdbd;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .condition {
-      color: var(--green);
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    /* ================= BUTTON ================= */
-
-    .order-btn {
-      margin-top: 22px;
-
-      width: 100%;
-
-      background: transparent;
-
-      color: var(--green);
-
-      border: 1px solid var(--green);
-
-      border-radius: 9px;
-
-      padding: 13px 10px;
-
-      font-size: 13px;
-
-      font-weight: bold;
-
-      cursor: pointer;
-
-      transition: 0.3s;
-    }
-
-    .order-btn:hover {
-      background: var(--green);
-
-      color: #071000;
-
-      box-shadow:
-        0 0 20px rgba(168, 255, 0, 0.25);
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 900px) {
-
-      .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .section-title h1 {
-        font-size: 36px;
-      }
-
-      .circuit-left {
-        left: -150px;
-        opacity: 0.55;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      header {
-        height: 65px;
-      }
-
-      .nav {
-        padding: 0 15px;
-      }
-
-      .logo img {
-        width: 110px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .products-section {
-        padding: 50px 15px 70px;
-      }
-
-      .section-title {
-        margin-bottom: 35px;
-      }
-
-      .section-title h1 {
-        font-size: 30px;
-      }
-
-      .products-grid {
-        grid-template-columns: 1fr;
-        max-width: 390px;
-      }
-
-      .product-card {
-        min-height: 480px;
-      }
-
-      .product-image {
-        height: 270px;
-      }
-
-      .circuit-left {
-        left: -230px;
-        width: 430px;
-        opacity: 0.4;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- HEADER -->
-
   <header>
-    <div class="nav">
+    <div class="container nav">
 
-      <a href="index.html" class="logo">
+      <a href="#inicio" class="logo">
         <img
           src="assets/fixlab-horizontal.png"
           alt="FIXLAB"
@@ -536,7 +28,7 @@
       </a>
 
       <nav>
-        <a href="index.html">Inicio</a>
+        <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#productos">Productos</a>
         <a href="#nosotros">Sobre nosotros</a>
@@ -547,260 +39,328 @@
   </header>
 
 
-  <!-- PRODUCTS -->
+  <!-- INICIO -->
+  <main>
 
-  <section class="products-section" id="productos">
+    <section id="inicio" class="hero">
 
-    <!-- CIRCUIT EFFECT -->
-    <div class="circuit-left"></div>
+      <div class="container hero-content">
+
+        <div class="hero-text">
+
+          <p class="subtitle">
+            REPARACIÓN • SMARTPHONES • ELECTRÓNICA
+          </p>
+
+          <h1>
+            Tu teléfono llega
+            <span>dañado.</span>
+            Sale como nuevo.
+          </h1>
+
+          <p class="hero-description">
+            Reparación profesional de teléfonos móviles,
+            placas electrónicas y dispositivos electrónicos.
+            También ofrecemos cables, cargadores,
+            fundas, protectores y accesorios.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              href="https://wa.me/34613645415"
+              target="_blank"
+              class="btn btn-green"
+            >
+              Contactar por WhatsApp
+            </a>
+
+            <a
+              href="#servicios"
+              class="btn btn-dark"
+            >
+              Ver nuestros servicios
+            </a>
+
+          </div>
+
+        </div>
 
 
-    <div class="section-title">
+        <div class="hero-logo">
 
-      <span>FIXLAB • PRODUCTOS</span>
+          <img
+            src="assets/fixlab-circular.jpeg"
+            alt="FIXLAB"
+          >
 
-      <h1>Productos disponibles</h1>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>NUESTROS SERVICIOS</p>
+
+          <h2>
+            Reparación profesional
+          </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card">
+
+            <h3>Diagnóstico</h3>
+
+            <p>
+              Identificación precisa del problema
+              antes de realizar cualquier reparación.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>Cargadores</h3>
+
+            <p>
+              Cargadores y adaptadores para
+              diferentes modelos de teléfonos.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>Microelectrónica</h3>
+
+            <p>
+              Diagnóstico y reparación de placas
+              electrónicas con precisión profesional.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>Problemas de batería</h3>
+
+            <p>
+              Solución de problemas relacionados
+              con batería, autonomía y alimentación.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>Cables</h3>
+
+            <p>
+              Cables USB y cables de carga
+              para diferentes dispositivos.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>Fundas</h3>
+
+            <p>
+              Fundas para diferentes modelos
+              de smartphones.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>Protectores</h3>
+
+            <p>
+              Protección de pantalla y accesorios
+              para mantener tu teléfono seguro.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>ACCESORIOS</p>
+
+          <h2>
+            Nuestros productos
+          </h2>
+
+        </div>
+
+
+        <div class="products">
+
+          <div class="product">
+            <h3>Cargadores</h3>
+            <p>
+              Cargadores y adaptadores para
+              diferentes dispositivos.
+            </p>
+          </div>
+
+
+          <div class="product">
+            <h3>Cables</h3>
+            <p>
+              Cables USB y cables de carga.
+            </p>
+          </div>
+
+
+          <div class="product">
+            <h3>Fundas</h3>
+            <p>
+              Fundas para diferentes smartphones.
+            </p>
+          </div>
+
+
+          <div class="product">
+            <h3>Protectores</h3>
+            <p>
+              Protección para pantalla y teléfono.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="section about">
+
+      <div class="container about-content">
+
+        <div>
+
+          <p class="section-small">
+            FIXLAB
+          </p>
+
+          <h2>
+            Reparación profesional
+            y atención de confianza.
+          </h2>
+
+          <p>
+            En FIXLAB nos especializamos en la
+            reparación de teléfonos móviles,
+            placas electrónicas y dispositivos
+            electrónicos.
+          </p>
+
+          <p>
+            Nuestro objetivo es ofrecer un servicio
+            profesional, rápido y transparente.
+          </p>
+
+        </div>
+
+
+        <img
+          src="assets/fixlab-circular.jpeg"
+          alt="FIXLAB"
+          class="about-logo"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+
+      <div class="container contact-content">
+
+        <p class="section-small">
+          ¿NECESITAS AYUDA?
+        </p>
+
+        <h2>
+          ¿Tu teléfono tiene un problema?
+        </h2>
+
+        <p>
+          Escríbenos y cuéntanos qué problema
+          tiene tu dispositivo.
+        </p>
+
+        <a
+          href="https://wa.me/34613645415"
+          target="_blank"
+          class="btn btn-green"
+        >
+          Contactar por WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-content">
+
+      <img
+        src="assets/fixlab-horizontal.png"
+        alt="FIXLAB"
+      >
 
       <p>
-        Equipos y accesorios seleccionados por FIXLAB
+        © 2026 FIXLAB. Todos los derechos reservados.
       </p>
 
     </div>
 
+  </footer>
 
-    <div class="products-grid">
 
-
-      <!-- PRODUCTO 1 -->
-
-      <article class="product-card">
-
-        <div class="price">
-          599€
-        </div>
-
-        <div class="product-image">
-
-          <img
-            src="assets/iphone.png"
-            alt="iPhone"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h2>iPhone 15</h2>
-
-          <div class="specs">
-            128GB • Excelente estado
-          </div>
-
-          <div class="condition">
-            Excelente
-          </div>
-
-          <button class="order-btn">
-            📦 PEDIR Y RECOGER POR CAJA
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- PRODUCTO 2 -->
-
-      <article class="product-card">
-
-        <div class="price">
-          299€
-        </div>
-
-        <div class="product-image">
-
-          <img
-            src="assets/airpods.png"
-            alt="AirPods"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h2>AirPods Pro</h2>
-
-          <div class="specs">
-            USB-C • Original
-          </div>
-
-          <div class="condition">
-            Excelente estado
-          </div>
-
-          <button class="order-btn">
-            📦 PEDIR Y RECOGER POR CAJA
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- PRODUCTO 3 -->
-
-      <article class="product-card">
-
-        <div class="price">
-          39€
-        </div>
-
-        <div class="product-image">
-
-          <img
-            src="assets/cargador.png"
-            alt="Cargador"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h2>Cargador USB-C</h2>
-
-          <div class="specs">
-            Carga rápida • Original
-          </div>
-
-          <div class="condition">
-            Nuevo
-          </div>
-
-          <button class="order-btn">
-            📦 PEDIR Y RECOGER POR CAJA
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- PRODUCTO 4 -->
-
-      <article class="product-card">
-
-        <div class="price">
-          19€
-        </div>
-
-        <div class="product-image">
-
-          <img
-            src="assets/cable.png"
-            alt="Cable USB"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h2>Cable USB-C</h2>
-
-          <div class="specs">
-            USB-C • Carga rápida
-          </div>
-
-          <div class="condition">
-            Nuevo
-          </div>
-
-          <button class="order-btn">
-            📦 PEDIR Y RECOGER POR CAJA
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- PRODUCTO 5 -->
-
-      <article class="product-card">
-
-        <div class="price">
-          25€
-        </div>
-
-        <div class="product-image">
-
-          <img
-            src="assets/funda.png"
-            alt="Funda"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h2>Funda Smartphone</h2>
-
-          <div class="specs">
-            Protección • Diseño premium
-          </div>
-
-          <div class="condition">
-            Nuevo
-          </div>
-
-          <button class="order-btn">
-            📦 PEDIR Y RECOGER POR CAJA
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- PRODUCTO 6 -->
-
-      <article class="product-card">
-
-        <div class="price">
-          15€
-        </div>
-
-        <div class="product-image">
-
-          <img
-            src="assets/proteccion.png"
-            alt="Protector de pantalla"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h2>Protector de pantalla</h2>
-
-          <div class="specs">
-            Protección • Alta resistencia
-          </div>
-
-          <div class="condition">
-            Nuevo
-          </div>
-
-          <button class="order-btn">
-            📦 PEDIR Y RECOGER POR CAJA
-          </button>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
+  <script src="script.js"></script>
 
 </body>
 </html>
