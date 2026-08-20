@@ -5,13 +5,15 @@
 }
 
 :root {
-  --black: #070909;
-  --black-light: #101513;
+  --black: #050706;
+  --black-light: #0b0f0d;
+  --card: #101512;
   --green: #9cff00;
-  --green-dark: #72c900;
+  --green-soft: rgba(156, 255, 0, 0.18);
+  --green-glow: rgba(156, 255, 0, 0.45);
   --white: #f5f7f4;
   --gray: #aab3ad;
-  --border: #28322d;
+  --border: #27312c;
 }
 
 html {
@@ -23,6 +25,7 @@ body {
   background: var(--black);
   color: var(--white);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -36,19 +39,25 @@ a {
   margin: auto;
 }
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(7, 9, 9, 0.96);
+
+  background: rgba(5, 7, 6, 0.96);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav {
   min-height: 78px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,19 +77,25 @@ nav a {
   color: #e9eee9;
   font-size: 15px;
   font-weight: bold;
-  transition: 0.2s;
+  transition: 0.25s ease;
 }
 
 nav a:hover {
   color: var(--green);
 }
 
-/* HERO */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
   min-height: calc(100vh - 78px);
+
   display: flex;
   align-items: center;
+
+  position: relative;
+  overflow: hidden;
 
   background:
     radial-gradient(
@@ -96,7 +111,9 @@ nav a:hover {
 .hero-content {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
+
   align-items: center;
+
   gap: 70px;
 }
 
@@ -124,8 +141,11 @@ nav a:hover {
 
 .description {
   max-width: 680px;
+
   color: var(--gray);
+
   font-size: 19px;
+
   margin-bottom: 32px;
 }
 
@@ -137,10 +157,14 @@ nav a:hover {
 
 .btn {
   display: inline-block;
+
   padding: 14px 23px;
+
   border-radius: 8px;
+
   font-weight: 800;
-  transition: 0.2s;
+
+  transition: 0.25s ease;
 }
 
 .primary {
@@ -170,11 +194,16 @@ nav a:hover {
 
 .hero-logo img {
   width: min(390px, 85%);
+
   border-radius: 50%;
-  box-shadow: 0 0 70px rgba(156, 255, 0, 0.12);
+
+  box-shadow:
+    0 0 70px rgba(156, 255, 0, 0.12);
 }
 
-/* SECTIONS */
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 .section {
   padding: 100px 0;
@@ -182,30 +211,45 @@ nav a:hover {
 
 .section h2 {
   text-align: center;
+
   font-size: clamp(32px, 4vw, 52px);
+
   margin-bottom: 45px;
 }
 
-/* CARDS */
+/* =====================================================
+   NORMAL CARDS
+===================================================== */
 
 .cards {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 18px;
 }
 
 .card {
   background: var(--black-light);
+
   border: 1px solid var(--border);
+
   border-radius: 15px;
+
   padding: 30px;
+
   min-height: 240px;
-  transition: 0.25s;
+
+  transition: 0.25s ease;
 }
 
 .card:hover {
   border-color: var(--green);
+
   transform: translateY(-5px);
+
+  box-shadow:
+    0 0 25px rgba(156, 255, 0, 0.08);
 }
 
 .icon {
@@ -222,35 +266,251 @@ nav a:hover {
   color: var(--gray);
 }
 
-/* PRODUCTS */
+/* =====================================================
+   PRODUCTS SECTION
+   CIRCUIT EFFECT
+===================================================== */
 
 .dark-section {
-  background: #0c100e;
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(156, 255, 0, 0.07),
+      transparent 28%
+    ),
+    #080b09;
+
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+/* =====================================================
+   CIRCUIT LINES
+===================================================== */
+
+.dark-section::before {
+  content: "";
+
+  position: absolute;
+
+  left: -20px;
+  top: 0;
+
+  width: 430px;
+  height: 100%;
+
+  pointer-events: none;
+
+  opacity: 0.8;
+
+  background:
+
+    /* نقاط مضوية */
+
+    radial-gradient(
+      circle at 76% 10%,
+      var(--green) 0 3px,
+      transparent 4px
+    ),
+
+    radial-gradient(
+      circle at 57% 25%,
+      var(--green) 0 3px,
+      transparent 4px
+    ),
+
+    radial-gradient(
+      circle at 74% 41%,
+      var(--green) 0 3px,
+      transparent 4px
+    ),
+
+    radial-gradient(
+      circle at 48% 58%,
+      var(--green) 0 3px,
+      transparent 4px
+    ),
+
+    radial-gradient(
+      circle at 70% 76%,
+      var(--green) 0 3px,
+      transparent 4px
+    ),
+
+    radial-gradient(
+      circle at 52% 91%,
+      var(--green) 0 3px,
+      transparent 4px
+    );
+
+  filter:
+    drop-shadow(0 0 5px var(--green-glow))
+    drop-shadow(0 0 12px rgba(156, 255, 0, 0.18));
 }
 
+/* =====================================================
+   CIRCUIT PATHS
+===================================================== */
+
+.dark-section::after {
+  content: "";
+
+  position: absolute;
+
+  left: -30px;
+  top: 0;
+
+  width: 470px;
+  height: 100%;
+
+  pointer-events: none;
+
+  opacity: 0.65;
+
+  background:
+
+    /* خط عمودي */
+
+    linear-gradient(
+      90deg,
+      transparent 0 25%,
+      rgba(156, 255, 0, 0.65) 25% 25.5%,
+      transparent 25.5%
+    ),
+
+    /* خط ثاني */
+
+    linear-gradient(
+      90deg,
+      transparent 0 52%,
+      rgba(156, 255, 0, 0.5) 52% 52.5%,
+      transparent 52.5%
+    ),
+
+    /* خطوط مائلة */
+
+    linear-gradient(
+      28deg,
+      transparent 0 48%,
+      rgba(156, 255, 0, 0.65) 48% 48.5%,
+      transparent 48.5%
+    ),
+
+    linear-gradient(
+      -28deg,
+      transparent 0 55%,
+      rgba(156, 255, 0, 0.55) 55% 55.5%,
+      transparent 55.5%
+    );
+
+  filter:
+    drop-shadow(0 0 5px rgba(156, 255, 0, 0.35));
+
+  mask-image:
+    linear-gradient(
+      to right,
+      black 0%,
+      black 45%,
+      transparent 100%
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      black 0%,
+      black 45%,
+      transparent 100%
+    );
+}
+
+/* نخلي المحتوى فوق الـeffect */
+
+.dark-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =====================================================
+   PRODUCTS GRID
+===================================================== */
+
+.products {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
 .product {
-  background: #111613;
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 22, 19, 0.97),
+      rgba(8, 11, 9, 0.97)
+    );
+
   border: 1px solid var(--border);
-  border-radius: 15px;
+
+  border-radius: 16px;
+
   padding: 35px 25px;
-  min-height: 170px;
-  transition: 0.25s;
+
+  min-height: 190px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  overflow: hidden;
+}
+
+/* خط أخضر صغير أعلى الكارت */
+
+.product::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 25px;
+
+  width: 45px;
+  height: 2px;
+
+  background: var(--green);
+
+  box-shadow:
+    0 0 10px var(--green);
 }
 
 .product:hover {
   border-color: var(--green);
+
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(156, 255, 0, 0.10);
 }
 
 .product h3 {
   color: white;
+
   margin-bottom: 10px;
 }
 
@@ -258,12 +518,17 @@ nav a:hover {
   color: var(--gray);
 }
 
-/* ABOUT */
+/* =====================================================
+   ABOUT
+===================================================== */
 
 .about {
   display: grid;
+
   grid-template-columns: 1fr 330px;
+
   gap: 80px;
+
   align-items: center;
 }
 
@@ -273,20 +538,27 @@ nav a:hover {
 
 .about p {
   color: var(--gray);
+
   margin-bottom: 15px;
+
   font-size: 17px;
 }
 
 .about img {
   width: 100%;
+
   border-radius: 50%;
 }
 
-/* CONTACT */
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact {
   padding: 90px 0;
+
   text-align: center;
+
   background:
     radial-gradient(
       circle at center,
@@ -298,29 +570,39 @@ nav a:hover {
 
 .contact h2 {
   font-size: clamp(35px, 5vw, 55px);
+
   margin-bottom: 15px;
 }
 
 .contact p:not(.green-text) {
   color: var(--gray);
+
   margin-bottom: 25px;
 }
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
   border-top: 1px solid var(--border);
+
   padding: 35px 0;
+
   text-align: center;
+
   color: var(--gray);
 }
 
 footer img {
   width: 135px;
+
   margin-bottom: 12px;
 }
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 900px) {
 
@@ -330,6 +612,7 @@ footer img {
 
   .hero-content {
     grid-template-columns: 1fr;
+
     text-align: center;
   }
 
@@ -357,6 +640,7 @@ footer img {
 
   .about {
     grid-template-columns: 1fr;
+
     text-align: center;
   }
 
@@ -366,9 +650,21 @@ footer img {
 
   .about img {
     width: 250px;
+
     margin: auto;
   }
+
+  /* circuit أصغر في التابلت */
+
+  .dark-section::before,
+  .dark-section::after {
+    width: 300px;
+  }
 }
+
+/* =====================================================
+   MOBILE PHONE
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -415,5 +711,25 @@ footer img {
 
   .contact {
     padding: 70px 0;
+  }
+
+  /* effect الهاتف */
+
+  .dark-section::before {
+    left: -160px;
+    width: 330px;
+
+    opacity: 0.55;
+  }
+
+  .dark-section::after {
+    left: -160px;
+    width: 350px;
+
+    opacity: 0.45;
+  }
+
+  .product {
+    padding: 30px 22px;
   }
 }
