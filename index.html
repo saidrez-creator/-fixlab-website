@@ -6,26 +6,25 @@
 
   <title>FIXLAB | Reparación de móviles y electrónica</title>
 
-  <meta
-    name="description"
-    content="FIXLAB - Reparación profesional de móviles, microelectrónica y accesorios."
-  >
+  <meta name="description"
+        content="FIXLAB - Reparación profesional de móviles, electrónica y venta de accesorios.">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container nav-container">
 
       <a href="#inicio" class="logo">
-        <img
-          src="assets/fixlab-horizontal.png"
-          alt="FIXLAB"
-        >
+        <img src="assets/fixlab-horizontal.png" alt="FIXLAB">
       </a>
+
+      <button class="menu-button" aria-label="Abrir menú">
+        ☰
+      </button>
 
       <nav>
         <a href="#inicio">Inicio</a>
@@ -39,7 +38,7 @@
   </header>
 
 
-  <!-- INICIO -->
+  <!-- ===== INICIO ===== -->
   <main>
 
     <section id="inicio" class="hero">
@@ -48,38 +47,34 @@
 
         <div class="hero-text">
 
-          <p class="subtitle">
+          <p class="eyebrow">
             REPARACIÓN • SMARTPHONES • ELECTRÓNICA
           </p>
 
           <h1>
-            Tu teléfono llega
-            <span>dañado.</span>
-            Sale como nuevo.
+            Tu móvil llega roto.
+            <span>Sale como nuevo.</span>
           </h1>
 
           <p class="hero-description">
-            Reparación profesional de teléfonos móviles,
-            placas electrónicas y dispositivos electrónicos.
-            También ofrecemos cables, cargadores,
-            fundas, protectores y accesorios.
+            Reparación profesional de teléfonos móviles, placas electrónicas
+            y dispositivos electrónicos. También encontrarás cables,
+            cargadores, fundas, protectores y accesorios.
           </p>
 
-          <div class="buttons">
+          <div class="hero-buttons">
 
             <a
+              class="btn btn-primary whatsapp"
               href="https://wa.me/34613645415"
               target="_blank"
-              class="btn btn-green"
+              rel="noopener"
             >
               Contactar por WhatsApp
             </a>
 
-            <a
-              href="#servicios"
-              class="btn btn-dark"
-            >
-              Ver nuestros servicios
+            <a href="#productos" class="btn btn-secondary">
+              Ver productos
             </a>
 
           </div>
@@ -91,7 +86,7 @@
 
           <img
             src="assets/fixlab-circular.jpeg"
-            alt="FIXLAB"
+            alt="FIXLAB Micro Board Data"
           >
 
         </div>
@@ -101,105 +96,67 @@
     </section>
 
 
-    <!-- SERVICIOS -->
+    <!-- ===== SERVICIOS ===== -->
     <section id="servicios" class="section">
 
       <div class="container">
 
-        <div class="section-title">
+        <p class="section-label">LO QUE HACEMOS</p>
 
-          <p>NUESTROS SERVICIOS</p>
+        <h2>Nuestros servicios</h2>
 
-          <h2>
-            Reparación profesional
-          </h2>
-
-        </div>
+        <p class="section-description">
+          Soluciones profesionales para reparar y mantener tus dispositivos.
+        </p>
 
 
         <div class="cards">
 
           <article class="card">
+            <div class="card-icon">📱</div>
+
+            <h3>Reparación de móviles</h3>
+
+            <p>
+              Reparación de pantallas, baterías, conectores,
+              cámaras y diferentes averías.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <div class="card-icon">🔧</div>
+
+            <h3>Reparación electrónica</h3>
+
+            <p>
+              Diagnóstico y reparación de placas electrónicas
+              y componentes.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <div class="card-icon">⚡</div>
 
             <h3>Diagnóstico</h3>
 
             <p>
-              Identificación precisa del problema
-              antes de realizar cualquier reparación.
+              Revisamos tu dispositivo para encontrar el problema
+              y ofrecerte la mejor solución.
             </p>
-
           </article>
 
 
           <article class="card">
+            <div class="card-icon">🛡️</div>
 
-            <h3>Cargadores</h3>
-
-            <p>
-              Cargadores y adaptadores para
-              diferentes modelos de teléfonos.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>Microelectrónica</h3>
+            <h3>Protección y accesorios</h3>
 
             <p>
-              Diagnóstico y reparación de placas
-              electrónicas con precisión profesional.
+              Fundas, protectores de pantalla, cables,
+              cargadores y accesorios.
             </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>Problemas de batería</h3>
-
-            <p>
-              Solución de problemas relacionados
-              con batería, autonomía y alimentación.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>Cables</h3>
-
-            <p>
-              Cables USB y cables de carga
-              para diferentes dispositivos.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>Fundas</h3>
-
-            <p>
-              Fundas para diferentes modelos
-              de smartphones.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>Protectores</h3>
-
-            <p>
-              Protección de pantalla y accesorios
-              para mantener tu teléfono seguro.
-            </p>
-
           </article>
 
         </div>
@@ -209,55 +166,52 @@
     </section>
 
 
-    <!-- PRODUCTOS -->
-    <section id="productos" class="section">
+    <!-- ===== PRODUCTOS ===== -->
+    <section id="productos" class="section products-section">
 
       <div class="container">
 
-        <div class="section-title">
+        <p class="section-label">ACCESORIOS</p>
 
-          <p>ACCESORIOS</p>
+        <h2>Productos</h2>
 
-          <h2>
-            Nuestros productos
-          </h2>
-
-        </div>
+        <p class="section-description">
+          Todo lo que necesitas para proteger y cuidar tu dispositivo.
+        </p>
 
 
-        <div class="products">
+        <div class="cards">
 
-          <div class="product">
+          <article class="card product-card">
             <h3>Cargadores</h3>
             <p>
-              Cargadores y adaptadores para
-              diferentes dispositivos.
+              Cargadores y soluciones de carga para diferentes dispositivos.
             </p>
-          </div>
+          </article>
 
 
-          <div class="product">
+          <article class="card product-card">
             <h3>Cables</h3>
             <p>
-              Cables USB y cables de carga.
+              Cables de carga y conexión para smartphones y dispositivos.
             </p>
-          </div>
+          </article>
 
 
-          <div class="product">
+          <article class="card product-card">
             <h3>Fundas</h3>
             <p>
-              Fundas para diferentes smartphones.
+              Protección y diseño para mantener tu móvil seguro.
             </p>
-          </div>
+          </article>
 
 
-          <div class="product">
+          <article class="card product-card">
             <h3>Protectores</h3>
             <p>
-              Protección para pantalla y teléfono.
+              Protectores de pantalla para reducir golpes y arañazos.
             </p>
-          </div>
+          </article>
 
         </div>
 
@@ -266,72 +220,72 @@
     </section>
 
 
-    <!-- SOBRE NOSOTROS -->
-    <section id="nosotros" class="section about">
+    <!-- ===== SOBRE NOSOTROS ===== -->
+    <section id="nosotros" class="section about-section">
 
       <div class="container about-content">
 
         <div>
 
-          <p class="section-small">
-            FIXLAB
-          </p>
+          <p class="section-label">FIXLAB</p>
 
-          <h2>
-            Reparación profesional
-            y atención de confianza.
-          </h2>
+          <h2>Sobre nosotros</h2>
 
           <p>
-            En FIXLAB nos especializamos en la
-            reparación de teléfonos móviles,
-            placas electrónicas y dispositivos
-            electrónicos.
+            En FIXLAB nos dedicamos a la reparación de móviles
+            y dispositivos electrónicos.
           </p>
 
           <p>
-            Nuestro objetivo es ofrecer un servicio
-            profesional, rápido y transparente.
+            Nuestro objetivo es ofrecer un servicio profesional,
+            rápido y de confianza para que tu dispositivo vuelva
+            a funcionar correctamente.
           </p>
 
         </div>
 
 
-        <img
-          src="assets/fixlab-circular.jpeg"
-          alt="FIXLAB"
-          class="about-logo"
-        >
+        <div class="about-box">
+
+          <img
+            src="assets/fixlab-circular.jpeg"
+            alt="Logo FIXLAB"
+          >
+
+          <h3>FIXLAB</h3>
+
+          <p>
+            MICRO • BOARD • DATA
+          </p>
+
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="contact">
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="section contact-section">
 
       <div class="container contact-content">
 
-        <p class="section-small">
-          ¿NECESITAS AYUDA?
-        </p>
+        <p class="section-label">CONTACTO</p>
 
-        <h2>
-          ¿Tu teléfono tiene un problema?
-        </h2>
+        <h2>¿Necesitas una reparación?</h2>
 
         <p>
-          Escríbenos y cuéntanos qué problema
-          tiene tu dispositivo.
+          Escríbenos por WhatsApp y cuéntanos qué problema tiene
+          tu dispositivo.
         </p>
 
         <a
+          class="btn btn-primary whatsapp"
           href="https://wa.me/34613645415"
           target="_blank"
-          class="btn btn-green"
+          rel="noopener"
         >
-          Contactar por WhatsApp
+          Hablar por WhatsApp
         </a>
 
       </div>
@@ -341,18 +295,23 @@
   </main>
 
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
 
     <div class="container footer-content">
 
       <img
         src="assets/fixlab-horizontal.png"
         alt="FIXLAB"
+        class="footer-logo"
       >
 
       <p>
-        © 2026 FIXLAB. Todos los derechos reservados.
+        © <span id="year"></span> FIXLAB. Todos los derechos reservados.
+      </p>
+
+      <p>
+        Reparación de móviles y electrónica.
       </p>
 
     </div>
