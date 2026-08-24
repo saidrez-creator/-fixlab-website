@@ -2,7 +2,6 @@
 
 :root {
   --bg: #050707;
-  --bg-soft: #090d0d;
   --card: #0c1213;
   --text: #f5f7f7;
   --muted: #9ca7a8;
@@ -25,13 +24,8 @@ html {
 body {
   font-family: "Inter", Arial, sans-serif;
   background:
-    radial-gradient(
-      circle at 75% 5%,
-      rgba(0,245,138,0.08),
-      transparent 28%
-    ),
+    radial-gradient(circle at 75% 5%, rgba(0,245,138,0.08), transparent 28%),
     var(--bg);
-
   color: var(--text);
   line-height: 1.6;
 }
@@ -52,7 +46,7 @@ img {
 }
 
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 .header {
   position: sticky;
@@ -60,7 +54,6 @@ img {
   z-index: 100;
 
   background: rgba(5,7,7,0.90);
-
   backdrop-filter: blur(18px);
 
   border-bottom: 1px solid var(--border);
@@ -82,9 +75,7 @@ img {
 
 nav {
   display: flex;
-
   gap: 24px;
-
   margin-left: auto;
 }
 
@@ -94,7 +85,6 @@ nav a {
   padding: 26px 0;
 
   font-size: 14px;
-
   color: #dce2e2;
 
   transition: 0.25s;
@@ -130,24 +120,20 @@ nav a:hover::after {
   margin-left: auto;
 
   background: none;
-
   border: 0;
 
   color: white;
 
   font-size: 30px;
-
-  cursor: pointer;
 }
 
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
   min-height: 690px;
 
   position: relative;
-
   overflow: hidden;
 
   border-bottom: 1px solid var(--border);
@@ -191,7 +177,7 @@ nav a:hover::after {
 .hero h1 {
   margin: 18px 0;
 
-  font-size: clamp(46px, 6vw, 78px);
+  font-size: clamp(46px,6vw,78px);
 
   line-height: 1.02;
 
@@ -200,7 +186,6 @@ nav a:hover::after {
 
 .hero h1 span {
   display: block;
-
   color: var(--green);
 }
 
@@ -214,10 +199,7 @@ nav a:hover::after {
 
 .hero-buttons {
   display: flex;
-
   flex-wrap: wrap;
-
-  justify-content: center;
 
   gap: 12px;
 
@@ -232,7 +214,6 @@ nav a:hover::after {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   padding: 14px 22px;
@@ -265,7 +246,6 @@ nav a:hover::after {
 
 .btn-primary {
   background: var(--green);
-
   color: #00130a;
 
   box-shadow:
@@ -285,12 +265,11 @@ nav a:hover::after {
 
 .btn-secondary:hover {
   border-color: var(--green);
-
   color: var(--green);
 }
 
 
-/* ================= HERO LOGO ================= */
+/* HERO LOGO */
 
 .hero-logo {
   position: relative;
@@ -322,23 +301,19 @@ nav a:hover::after {
 
 .hero-logo img {
   position: relative;
-
   z-index: 2;
 
   width: 330px;
-
   max-width: 75%;
 
   display: block;
 
   filter:
-    drop-shadow(
-      0 0 25px rgba(0,245,138,0.20)
-    );
+    drop-shadow(0 0 25px rgba(0,245,138,0.20));
 }
 
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 .section {
   padding: 100px 0;
@@ -364,7 +339,7 @@ nav a:hover::after {
 }
 
 
-/* ================= CARDS ================= */
+/* CARDS */
 
 .cards {
   display: grid;
@@ -415,7 +390,7 @@ nav a:hover::after {
 }
 
 
-/* ================= SERVICE ICONS ================= */
+/* SERVICE ICONS */
 
 .card-icon {
   width: 64px;
@@ -430,11 +405,9 @@ nav a:hover::after {
 
   border-radius: 15px;
 
-  background:
-    rgba(0,245,138,0.06);
+  background: rgba(0,245,138,0.06);
 
-  border:
-    1px solid rgba(0,245,138,0.18);
+  border: 1px solid rgba(0,245,138,0.18);
 
   color: var(--green);
 }
@@ -454,9 +427,7 @@ nav a:hover::after {
   stroke-linejoin: round;
 
   filter:
-    drop-shadow(
-      0 0 8px rgba(0,245,138,0.35)
-    );
+    drop-shadow(0 0 8px rgba(0,245,138,0.35));
 }
 
 .card h3 {
@@ -482,7 +453,7 @@ nav a:hover::after {
 }
 
 
-/* ================= PRODUCTS ================= */
+/* PRODUCTS */
 
 .products-section {
   background:
@@ -498,7 +469,7 @@ nav a:hover::after {
 }
 
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 
 .about-section {
   background:
@@ -535,7 +506,6 @@ nav a:hover::after {
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -562,9 +532,7 @@ nav a:hover::after {
   margin-bottom: 20px;
 
   filter:
-    drop-shadow(
-      0 0 25px rgba(0,245,138,0.18)
-    );
+    drop-shadow(0 0 25px rgba(0,245,138,0.18));
 }
 
 .about-box h3 {
@@ -582,7 +550,7 @@ nav a:hover::after {
 }
 
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact-section {
   background:
@@ -612,9 +580,6 @@ nav a:hover::after {
 
   line-height: 1.1;
 }
-
-
-/* ================= CONTACT INFO ================= */
 
 .contact-info {
   display: flex;
@@ -657,9 +622,7 @@ nav a:hover::after {
   stroke-linejoin: round;
 
   filter:
-    drop-shadow(
-      0 0 7px rgba(0,245,138,0.35)
-    );
+    drop-shadow(0 0 7px rgba(0,245,138,0.35));
 }
 
 .contact-item.closed svg {
@@ -667,7 +630,65 @@ nav a:hover::after {
 }
 
 
-/* ================= FOOTER ================= */
+/* SOCIAL */
+
+.social-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.social-links a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  color: var(--green);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.social-links a:hover {
+  border-color: var(--green);
+
+  background: rgba(0,245,138,0.06);
+
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* FOOTER */
 
 .footer {
   padding: 40px 0;
@@ -693,8 +714,67 @@ nav a:hover::after {
   width: 130px;
 }
 
+.footer-social {
+  display: flex;
 
-/* ================= MOBILE ================= */
+  gap: 18px;
+}
+
+.footer-social a:hover {
+  color: var(--green);
+}
+
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 90;
+
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  color: #00130a;
+
+  box-shadow:
+    0 0 35px rgba(0,245,138,0.4);
+
+  transition: 0.25s;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+}
+
+.floating-whatsapp svg {
+  width: 28px;
+  height: 28px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* MOBILE */
 
 @media (max-width: 760px) {
 
@@ -735,9 +815,6 @@ nav a:hover::after {
     padding: 10px 0;
   }
 
-
-  /* HERO */
-
   .hero {
     min-height: auto;
   }
@@ -777,17 +854,11 @@ nav a:hover::after {
     font-size: 16px;
   }
 
-
-  /* CARDS */
-
   .cards {
     grid-template-columns: repeat(2,1fr);
 
     gap: 14px;
   }
-
-
-  /* ABOUT */
 
   .about-content {
     grid-template-columns: 1fr;
@@ -795,16 +866,13 @@ nav a:hover::after {
     gap: 35px;
   }
 
-
-  /* FOOTER */
-
   .footer-content {
     flex-direction: column;
 
     text-align: center;
   }
-}
 
+}
 
 @media (max-width: 520px) {
 
@@ -841,7 +909,6 @@ nav a:hover::after {
     width: 205px;
   }
 
-
   .cards {
     grid-template-columns: 1fr;
   }
@@ -852,7 +919,6 @@ nav a:hover::after {
     padding: 24px 18px;
   }
 
-
   .contact-item {
     width: 100%;
 
@@ -861,6 +927,15 @@ nav a:hover::after {
     text-align: center;
   }
 
+  .social-links {
+    flex-direction: column;
+  }
+
+  .footer-social {
+    flex-direction: column;
+
+    gap: 8px;
+  }
 
   .about-box {
     min-height: 300px;
